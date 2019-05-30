@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <ZMKit/ZMCategorieTest.h>
 #import <ZMKit/UIView+Test.h>
+#import <ZMKit/ZMPerson.h>
+#import <ZMKit/NSDate+ZMAdd.h>
 
 
 
