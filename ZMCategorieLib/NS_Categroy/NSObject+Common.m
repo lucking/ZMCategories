@@ -10,9 +10,7 @@
 
 @implementation NSObject (Common)
 
-
 - (void)testUse {
-    
     [self zm_degreesToRadian:30];
     [self zm_radianToDegrees:M_PI_2];    
 }

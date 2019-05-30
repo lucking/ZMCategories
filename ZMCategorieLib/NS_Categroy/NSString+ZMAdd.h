@@ -9,16 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-//// ============================"  格式化 数据类型  "==============================
-//#define  NNSStringInt(myInt)        [NSString stringWithFormat:@"%d",myInt]        // Int
-//#define  NNSStringFloat(myFloat)    [NSString stringWithFormat:@"%f",myFloat]    // Float
-//#define  NNString2Float(myFloat)    [NSString stringWithFormat:@"%.2f",myFloat]    // Float：保留两位小数
-//
-//#define  NNSString(string)        [NSString stringWithFormat:@"%@",string]        // 1个NSString
-//#define  NNStringAB(AA,BB)        [NSString stringWithFormat:@"%@%@",AA,BB]        // 2个NSString 拼接
-//#define  NNStringABC(AA,BB,CC)    [NSString stringWithFormat:@"%@%@%@",AA,BB,CC]    // 3个NSString 拼接
-
-
 // 验证邮箱、手机号、身份证、qq
 typedef enum{
     VALIDATE_CHECK_EMAIL    =1,
@@ -29,9 +19,7 @@ typedef enum{
 
 
 @interface NSString (ZMAdd)
-{
-    
-}
+
 // 字符串拼接
 + (NSString *)zm_getABwithA:(NSString *)A and:(NSString *)B;
 // 去掉空格

@@ -12,12 +12,11 @@
 @implementation UIImage (ZMAdd)
 
 - (void)test {
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"imageName" ofType:@"png"];
-    UIImage *image = [UIImage imageWithContentsOfFile:path];
-    // 压缩
-    NSData *imageData = UIImagePNGRepresentation(image);
-    image = [UIImage imageWithData:imageData];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"imageName" ofType:@"png"];
+//    UIImage *image = [UIImage imageWithContentsOfFile:path];
+//    // 压缩
+//    NSData *imageData = UIImagePNGRepresentation(image);
+//    image = [UIImage imageWithData:imageData];
 }
 
 

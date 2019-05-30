@@ -23,8 +23,6 @@
     return strM;
 }
 
-
-
 //将属性列表对象按照指定编码方式转换为NSData对象
 //调用NSPropertyListSerialization类的dataWithPropertyList: format:format options:error:
 //方法将属性列表对象编码为指定格式的NSData对象。NSPropertyListXMLFormat_v1_0是xml编码/NSPropertyListBinaryFormat_v1_0二进制编码。

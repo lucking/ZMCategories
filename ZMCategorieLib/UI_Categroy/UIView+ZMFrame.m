@@ -47,11 +47,11 @@
 - (CGFloat)bottom	{	return self.frame.origin.y + self.frame.size.height;}
 
 
-//- (void)setMaxX:(CGFloat)maxX {
-//	CGRect frame = self.frame;
-//	frame.origin.x = maxX - frame.size.width;
-//	self.frame = frame;
-//}
+- (void)setMaxX:(CGFloat)maxX {
+    CGRect frame = self.frame;
+    frame.origin.x = maxX - frame.size.width;
+    self.frame = frame;
+}
 - (void)setMinX:(CGFloat)minX {
     CGRect frame = self.frame;
     frame.origin.x = minX;

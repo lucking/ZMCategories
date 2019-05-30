@@ -16,7 +16,6 @@ static CGFloat titleH = 26.f;
 {
     self = [super initWithFrame:frame];
     if (self) {
-//        self.titleLabel.backgroundColor = CyanColor;
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return self;

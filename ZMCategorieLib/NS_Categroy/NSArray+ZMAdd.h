@@ -9,23 +9,17 @@
 #import <Foundation/Foundation.h>
 
 @interface NSArray (ZMAdd)
-{
-    
-}
+
 //数组中是否包含 某个元素
 - (BOOL)isContainString:(NSString *)myStr;
-
 - (BOOL)isContainObject:(id)obj;
-
 
 - (NSString *)descriptionWithLocale:(id)locale;
 
 #pragma mark  方法一：从小到大
 + (NSArray *)sortedArrayUseComparator:(NSArray *)myArray;
-
 #pragma mark  方法二：从小到大
 + (NSArray *)sortedArrayUseFunction:(NSArray *)myArray;
-
 #pragma mark  利用属性排序
 + (NSArray *)sortedArrayUseDescriptor:(NSArray *)myArray sortWithKey:(NSString *)myKey;
 

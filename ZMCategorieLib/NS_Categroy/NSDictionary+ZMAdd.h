@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface NSDictionary (ZMAdd)
-{
-    
-}
+
 - (NSString *)descriptionWithLocale:(id)locale;
 
 // NSDictionary转换为XML的plist格式： Dic -> XML

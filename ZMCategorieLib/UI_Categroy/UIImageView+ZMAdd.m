@@ -10,6 +10,7 @@
 #import "UIImage+ZMAdd.h"
 //#import "UIImageView+WebCache.h"
 //#import "YYWebImage.h"
+//#import <YYWebImage.h>
 
 @implementation UIImageView (ZMAdd)
 @dynamic imgName;
@@ -62,7 +63,7 @@
 //    }else {
 //        self.image = [UIImage imageNamed:imgName];
 //    }
-    
+//    
 //    if ([imgName hasPrefix:@"http"] | [imgName hasPrefix:@"https"]) {
 //
 //        [self yy_setImageWithURL:[NSURL URLWithString:imgName]
@@ -71,19 +72,19 @@
 //
 //                         }transform:nil completion:^(UIImage *image, NSURL *url,YYWebImageFromType from, YYWebImageStage stage, NSError *error) {
 //                         }];
-//        //方式一：
-//        [self yy_setImageWithURL:[NSURL URLWithString:imgName] options:YYWebImageOptionProgressive];
-//        //方式二：
-//        [self yy_setImageWithURL:[NSURL URLWithString:imgName]
-//                     placeholder:[UIImage imageNamed:@"placeholderImg"]];
-//        //方式三：
-//        [self yy_setImageWithURL:[NSURL URLWithString:imgName]
-//                     placeholder:[UIImage imageNamed:@"placeholderImg"]
-//                         options:YYWebImageOptionProgressiveBlur | YYWebImageOptionShowNetworkActivity |YYWebImageOptionSetImageWithFadeAnimation
-//                      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
-//            
-//        }];
-        
+////        //方式一：
+////        [self yy_setImageWithURL:[NSURL URLWithString:imgName] options:YYWebImageOptionProgressive];
+////        //方式二：
+////        [self yy_setImageWithURL:[NSURL URLWithString:imgName]
+////                     placeholder:[UIImage imageNamed:@"placeholderImg"]];
+////        //方式三：
+////        [self yy_setImageWithURL:[NSURL URLWithString:imgName]
+////                     placeholder:[UIImage imageNamed:@"placeholderImg"]
+////                         options:YYWebImageOptionProgressiveBlur | YYWebImageOptionShowNetworkActivity |YYWebImageOptionSetImageWithFadeAnimation
+////                      completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+////            
+////        }];
+//        
 //    }else{
 //        self.image = [UIImage zm_compressPngImageName:imgName];
 //    }
