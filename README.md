@@ -20,6 +20,11 @@ it, simply add the following line to your Podfile:
 pod 'ZMCategories'
 ```
 
+配置说明：
+库中有 category，并且有两级文件夹，项目中需设置 -all_load。
+即：PROJECT -> Build Settings -> Other Linker Flags 添加 -all_load
+
+
 ## Author
 
 lucking, 1531073749@qq.com
