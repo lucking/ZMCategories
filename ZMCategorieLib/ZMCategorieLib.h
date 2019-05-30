@@ -11,12 +11,19 @@
 //! Project version string for ZMCategorieLib.
 // In this header, you should import all the public headers of your framework using statements like #import <ZMCategorieLib/PublicHeader.h>
 
+#if __has_include(<ZMCategorieLib/ZMCategorieLib.h>)
 FOUNDATION_EXPORT double ZMCategorieLibVersionNumber;
 FOUNDATION_EXPORT const unsigned char ZMCategorieLibVersionString[];
 #import <ZMCategorieLib/ZMCategorieTest.h>
 #import <ZMCategorieLib/UIView+Test.h>
 #import <ZMCategorieLib/ZMPerson.h>
 #import <ZMCategorieLib/NSDate+ZMAdd.h>
-
-
+//...
+#else
+#import "ZMCategorieTest.h"
+#import "UIView+Test.h"
+#import "ZMPerson.h"
+#import "NSDate+ZMAdd.h"
+//...
+#endif
 
