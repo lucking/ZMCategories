@@ -1,0 +1,22 @@
+{
+  "name": "ZMCategories",
+  "version": "0.1.0",
+  "summary": "A short description of ZMCategories.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lucking/ZMCategories",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lucking": "1531073749@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/lucking/ZMCategories.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZMCategories/Classes/**/*"
+}

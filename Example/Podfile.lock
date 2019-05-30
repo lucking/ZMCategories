@@ -1,0 +1,16 @@
+PODS:
+  - ZMCategories (0.1.0)
+
+DEPENDENCIES:
+  - ZMCategories (from `../`)
+
+EXTERNAL SOURCES:
+  ZMCategories:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ZMCategories: c63b9db5a6ea322740a36d87b38a7ec6fd5511a8
+
+PODFILE CHECKSUM: 7cbb3d22da4e606b7b7a38d7c7bae3a66d6ff7e8
+
+COCOAPODS: 1.6.1
