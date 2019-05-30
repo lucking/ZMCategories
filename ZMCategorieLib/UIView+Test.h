@@ -1,0 +1,19 @@
+//
+//  UIView+Test.h
+//  ZMCategorieLib
+//
+//  Created by ZM on 2019/5/30.
+//  Copyright © 2019 ZM. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UIView (Test)
+
++ (void)test1;
+
+@end
+
+NS_ASSUME_NONNULL_END

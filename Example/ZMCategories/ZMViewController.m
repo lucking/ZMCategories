@@ -7,6 +7,8 @@
 //
 
 #import "ZMViewController.h"
+#import <ZMCategorieLib/ZMCategorieTest.h>
+#import <ZMCategorieLib/UIView+Test.h>
 
 @interface ZMViewController ()
 
@@ -17,7 +19,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [ZMCategorieTest test1];
+    [UIView test1];
+    
+
 }
 
 - (void)didReceiveMemoryWarning

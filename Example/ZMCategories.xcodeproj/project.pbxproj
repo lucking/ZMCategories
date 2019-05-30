@@ -20,6 +20,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		68139FF0229FC3D2004B9881 /* ZMCategorieLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68139FEF229FC3B8004B9881 /* ZMCategorieLib.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		7629CA33A0891E24A3FABF27 /* Pods_ZMCategories_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32B89CAB7FE1C32A639CA68 /* Pods_ZMCategories_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
@@ -33,6 +34,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = ZMCategories;
+		};
+		68139FEE229FC3B8004B9881 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68139FEA229FC3B8004B9881 /* ZMCategorieLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68139FD7229FC2F3004B9881;
+			remoteInfo = ZMCategorieLib;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,6 +68,7 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		68139FEA229FC3B8004B9881 /* ZMCategorieLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ZMCategorieLib.xcodeproj; path = ../ZMCategorieLib.xcodeproj; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FE60E476E69659551B500A1 /* Pods_ZMCategories_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZMCategories_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68139FF0229FC3D2004B9881 /* ZMCategorieLib.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
@@ -98,6 +108,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				68139FEA229FC3B8004B9881 /* ZMCategorieLib.xcodeproj */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for ZMCategories */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -185,6 +196,14 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		68139FEB229FC3B8004B9881 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68139FEF229FC3B8004B9881 /* ZMCategorieLib.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BE3C85F00255C68D2DC74D20 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +283,12 @@
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 68139FEB229FC3B8004B9881 /* Products */;
+					ProjectRef = 68139FEA229FC3B8004B9881 /* ZMCategorieLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* ZMCategories_Example */,
@@ -271,6 +296,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		68139FEF229FC3B8004B9881 /* ZMCategorieLib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ZMCategorieLib.framework;
+			remoteRef = 68139FEE229FC3B8004B9881 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6003F588195388D20070C39A /* Resources */ = {
@@ -502,6 +537,12 @@
 				GCC_PREFIX_HEADER = "ZMCategories/ZMCategories-Prefix.pch";
 				INFOPLIST_FILE = "ZMCategories/ZMCategories-Info.plist";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ZMCategories\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -517,6 +558,12 @@
 				GCC_PREFIX_HEADER = "ZMCategories/ZMCategories-Prefix.pch";
 				INFOPLIST_FILE = "ZMCategories/ZMCategories-Info.plist";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"ZMCategories\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
