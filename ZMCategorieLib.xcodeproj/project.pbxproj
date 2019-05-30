@@ -65,6 +65,8 @@
 		6813A149229FDBC9004B9881 /* NSArray+ZMAdd.h in Headers */ = {isa = PBXBuildFile; fileRef = 6813A131229FDBC9004B9881 /* NSArray+ZMAdd.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6813A14A229FDBC9004B9881 /* NSTimer+ZMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813A132229FDBC9004B9881 /* NSTimer+ZMAdd.m */; };
 		6813A14B229FDBC9004B9881 /* NSObject+Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 6813A133229FDBC9004B9881 /* NSObject+Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6813A153229FE7A5004B9881 /* ZMPerson.h in Headers */ = {isa = PBXBuildFile; fileRef = 6813A151229FE7A5004B9881 /* ZMPerson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6813A154229FE7A5004B9881 /* ZMPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6813A152229FE7A5004B9881 /* ZMPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +130,8 @@
 		6813A131229FDBC9004B9881 /* NSArray+ZMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+ZMAdd.h"; sourceTree = "<group>"; };
 		6813A132229FDBC9004B9881 /* NSTimer+ZMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+ZMAdd.m"; sourceTree = "<group>"; };
 		6813A133229FDBC9004B9881 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
+		6813A151229FE7A5004B9881 /* ZMPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZMPerson.h; sourceTree = "<group>"; };
+		6813A152229FE7A5004B9881 /* ZMPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZMPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +215,8 @@
 		6813A11B229FDBC9004B9881 /* NS_Categroy */ = {
 			isa = PBXGroup;
 			children = (
+				6813A151229FE7A5004B9881 /* ZMPerson.h */,
+				6813A152229FE7A5004B9881 /* ZMPerson.m */,
 				6813A131229FDBC9004B9881 /* NSArray+ZMAdd.h */,
 				6813A127229FDBC9004B9881 /* NSArray+ZMAdd.m */,
 				6813A128229FDBC9004B9881 /* NSData+ZMAdd.h */,
@@ -249,6 +255,10 @@
 				68139FDC229FC2F3004B9881 /* ZMCategorieLib.h in Headers */,
 				68139FE8229FC35B004B9881 /* ZMCategorieTest.h in Headers */,
 				6813A0F1229FD7BC004B9881 /* ZMCategorieHeader.h in Headers */,
+				68139FF3229FC406004B9881 /* UIView+Test.h in Headers */,
+				6813A0ED229FD11C004B9881 /* UIViewController+ZMAdd.h in Headers */,
+				6813A0E4229FD00A004B9881 /* UIWindow+ZMAdd.h in Headers */,
+				6813A0DD229FCFFA004B9881 /* UIView+ZMFrame.h in Headers */,
 				6813A115229FDAEB004B9881 /* UIImageView+ZMAdd.h in Headers */,
 				6813A117229FDAEB004B9881 /* UIImage+ZMAdd.h in Headers */,
 				6813A116229FDAEB004B9881 /* UIColor+ZMAdd.h in Headers */,
@@ -259,23 +269,20 @@
 				6813A111229FDAEB004B9881 /* UILabel+ZMAdd.h in Headers */,
 				6813A100229FD9E1004B9881 /* UITableView+ZMAdd.h in Headers */,
 				6813A113229FDAEB004B9881 /* CALayer+ZMAdd.h in Headers */,
+				6813A153229FE7A5004B9881 /* ZMPerson.h in Headers */,
 				6813A13C229FDBC9004B9881 /* NSObject+PushMessage.h in Headers */,
 				6813A144229FDBC9004B9881 /* NSObject+ZMAdd.h in Headers */,
-				6813A139229FDBC9004B9881 /* NSRunLoop+PerformBlock.h in Headers */,
 				6813A149229FDBC9004B9881 /* NSArray+ZMAdd.h in Headers */,
 				6813A13E229FDBC9004B9881 /* NSTimer+ZMAdd.h in Headers */,
 				6813A138229FDBC9004B9881 /* NSString+ZMAdd.h in Headers */,
 				6813A14B229FDBC9004B9881 /* NSObject+Common.h in Headers */,
 				6813A13B229FDBC9004B9881 /* NSDate+ZMAdd.h in Headers */,
-				6813A142229FDBC9004B9881 /* NSObject+AlertView.h in Headers */,
 				6813A140229FDBC9004B9881 /* NSData+ZMAdd.h in Headers */,
+				6813A142229FDBC9004B9881 /* NSObject+AlertView.h in Headers */,
 				6813A146229FDBC9004B9881 /* NSObject+NSLog.h in Headers */,
 				6813A134229FDBC9004B9881 /* NSDictionary+ZMAdd.h in Headers */,
+				6813A139229FDBC9004B9881 /* NSRunLoop+PerformBlock.h in Headers */,
 				6813A0E9229FD050004B9881 /* NoDataButton.h in Headers */,
-				6813A0ED229FD11C004B9881 /* UIViewController+ZMAdd.h in Headers */,
-				6813A0E4229FD00A004B9881 /* UIWindow+ZMAdd.h in Headers */,
-				6813A0DD229FCFFA004B9881 /* UIView+ZMFrame.h in Headers */,
-				68139FF3229FC406004B9881 /* UIView+Test.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 				6813A147229FDBC9004B9881 /* NSObject+PushMessage.m in Sources */,
 				6813A137229FDBC9004B9881 /* NSObject+ZMAdd.m in Sources */,
 				6813A0FE229FD9E1004B9881 /* UITableView+ZMAdd.m in Sources */,
+				6813A154229FE7A5004B9881 /* ZMPerson.m in Sources */,
 				6813A0FB229FD9E1004B9881 /* UIView+ZMAdd.m in Sources */,
 				6813A101229FD9E1004B9881 /* UISearchBar+ZMAdd.m in Sources */,
 				6813A136229FDBC9004B9881 /* NSObject+NSLog.m in Sources */,

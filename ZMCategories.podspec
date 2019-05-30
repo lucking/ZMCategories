@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   # s.source_files = 'ZMCategories/Classes/**/*'
   # s.source_files = 'ZMCategorieLib'
   s.source_files = 'ZMCategorieLib/**/*.{h,m}'
-  # s.public_header_files = 'YYCategories/**/*.{h}'
+  s.public_header_files = 'ZMCategorieLib/**/*.{h}'
   
   
   # s.resource_bundles = {
