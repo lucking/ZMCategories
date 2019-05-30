@@ -7,19 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ZMKit/ZMCategorieTest.h>
-#import <ZMKit/UIView+Test.h>
-#import <ZMKit/ZMPerson.h>
-#import <ZMKit/NSDate+ZMAdd.h>
-
 
 
 //! Project version number for ZMCategorieLib.
 FOUNDATION_EXPORT double ZMCategorieLibVersionNumber;
-
 //! Project version string for ZMCategorieLib.
 FOUNDATION_EXPORT const unsigned char ZMCategorieLibVersionString[];
-
 // In this header, you should import all the public headers of your framework using statements like #import <ZMCategorieLib/PublicHeader.h>
+#import <ZMCategorieLib/ZMCategorieTest.h>
+#import <ZMCategorieLib/UIView+Test.h>
+#import <ZMCategorieLib/ZMPerson.h>
+#import <ZMCategorieLib/NSDate+ZMAdd.h>
+
 
 
