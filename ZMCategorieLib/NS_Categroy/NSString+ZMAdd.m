@@ -16,185 +16,185 @@
  */
 - (void)useMethod{
     
-    // 特殊字符 \转义字符
-    NSLog(@"---> 特殊字符 =  '' @  \" \" Click ");
-    NSString *string_11 = NSLocalizedString(@"内容", @"解释说明");
-    NSString *string_22 = NSLocalizedString(@"Loading...", @"HUD loading title");
-    NSLog(@"---> string_11 = %@",string_11);
-    NSLog(@"---> string_22 = %@",string_22);
-
-    //替换
-    NSString *str = @"Replacing/";
-    str = [str stringByReplacingOccurrencesOfString:@"/" withString:@"\\"];
-    NSLog(@"---> str = %@ \n \n \n",str);
-    
-    NSString* aa = @"SDFADF",   *bb = @"s dfa sf_aff_sfag";
-    NSLog(@"字符串拼接 = %@",[NSString zm_getABwithA:aa and:bb]);
-    NSLog(@"去掉空格后 = %@",[NSString zm_removeStringEmpty:bb]);
-    
-    // 判断一个字符串里是否包含了另一个字符串: myString是否包含strA
-    NSString* string = @"HomeDirectoryPath holle world girls";
-    NSString* strA = @"girlds";
-    NSLog(@" isContainStringA = %d",[NSString zm_stringA:strA isContainStringB:string]);
-    
-    NSString* ssssa = @"魏一平";
-    [NSString zm_isChineseString:ssssa];
-    NSString* str1 = @"魏 一 平ads2  ,.,[sadf";
-    
-    NSLog(@"---> trim = %@",[str1 zm_trim]);
-    NSLog(@"---> isAllLetter = %d",[@"asdfia  bjJASDFAJN" zm_isAllLetter]);
-    
-    NSLog(@"---> isAllNum = %d",[@"112344,3" zm_isAllNum]);
-    NSLog(@"---> isContainNum = %d",[str1 zm_isContainNum]);
-    
-    NSLog(@"---> isContainSpecialString = %d",[str1 zm_isContainSpecialString]);
-    NSLog(@"---> isIllegalString = %d \n \n ",[str1 zm_isIllegalString]);
-    
-}
-
-//字符串的：截取、分割、替换、拼接、移除、插入
--(void)changeSting
-{
-    // 如下只是是一个截取办法，不同截取的方法都能达到目的！！！
-    NSString *str=@"1234567890abcdefgABCDEFG";
-    
-#pragma mark 1.截取_后几位 （从指定的字符串开始到尾部）
-#pragma mark
-    NSLog(@"--->1: 从指定位置到尾部：%@",[str substringFromIndex:7]);
-    
-    
-#pragma mark 2.截取_前几位 （是开始位置截取到指定位置但是不包含指定位置）
-#pragma mark
-    NSLog(@"--->2: 截取前几位：%@",[str substringToIndex:12]);
-    
-    
-#pragma mark 3.截取_指定宽度   按照给定的NSRang字符串截取字符串的：（开始位置，宽度）
-#pragma mark
-    NSLog(@"--->3: 从指定位置截取制定的宽度：%@",[str substringWithRange:NSMakeRange(5,8)]);
-    
-    
-#pragma mark 4.分割
-#pragma mark
-    NSString *str1=@"11=22=33=44";
-    NSArray *arry=[str1 componentsSeparatedByString:@"="];
-    NSLog(@"--->4: 分割_arry：%@",arry);
-    NSLog(@"--->4: 输出第0个：%@ ",[arry objectAtIndex:0]);
-    NSLog(@"--->4: 输出第1个：%@ ",[arry objectAtIndex:1]);
-    NSLog(@"--->4: 输出第2个：%@ ",[arry objectAtIndex:2]);
-    NSLog(@"--->4: 输出第3个：%@ \n ",[arry objectAtIndex:3]);
-    //2017-05-18 11:02:06.373 ProjectArchitecture[6253:100399] --->4: 输出第0个：11
-    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第1个：22
-    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第2个：33
-    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第3个：44
-    
-    
-#pragma mark 5.拼接
-#pragma mark
-    NSString* string1= @"str1 ";
-    NSString* string2= @"str2";
-    NSString* String= [string1 stringByAppendingFormat:@"%@",string2];
-    NSLog(@"--->5: 拼接：%@",String);
-    
-    //尾部追加字符串
-    NSMutableString *str5= [[NSMutableString alloc] initWithString:@"ABCDEFG_"];
-    [str5 appendString:@"12345"];
-    NSLog(@"--->5: 追加字符串：%@ \n ",str5);
-    
-    
-#pragma mark 6.替换
-#pragma mark
-    NSString *str6 = @"Hello world!";
-    str6 =[str6 stringByReplacingOccurrencesOfString:@"world" withString:@"India"];
-    NSLog(@"--->6: 替换：%@ \n ",str6); //复制代码你将会看到输入 Hello India
-    
-    
-#pragma mark 7.移除：以空格替换
-#pragma mark
-    NSString* cutString=@"cut_STring";
-    NSString* cutResult=[cutString stringByReplacingOccurrencesOfString:@"_S" withString:@""];
-    NSLog(@"--->7: 移除：%@ ",cutResult);
-    
-    //去除字符串首尾的空格和换行符
-    NSString *str7= @"   I love China \n ";
-    str7= [str7 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    NSLog(@"--->7: 去除字符串首尾的空格和换行符：%@ \n ",str7);
-    
-    
-#pragma mark 8.删除字符串：(开始位置，删除个数)
-#pragma mark
-    NSMutableString* str8= [[NSMutableString alloc] initWithString:@"123456789"];
-    [str8 deleteCharactersInRange:NSMakeRange(2,5)];
-    NSLog(@"--->8: 删除字符串: %@ \n ",str8);
-    [str8 deleteCharactersInRange:NSMakeRange(str8.length,1)];
-    
-    
-#pragma mark 9.在已有字符串所指定的位置中 插入字符串
-#pragma mark
-    NSString* date=@"20150421";
-    NSMutableString *timestr = [[NSMutableString alloc] initWithString:date];
-    [timestr insertString:@"-" atIndex:4];
-    [timestr insertString:@"-" atIndex:7];
-    NSLog(@"--->9: 插入：%@ \n ",timestr);
-    
-    
-#pragma mark 10.字符串大小写转换
-#pragma mark
-    NSString *strLow = @"This is a lowerCaseString!";
-    [strLow lowercaseString];
-    NSLog(@"--->10: 全部小写：%@ ", [strLow lowercaseString]);
-    
-    NSString *strUpper= @"This is a upperCaseString!";
-    [strUpper uppercaseString];
-    NSLog(@"--->10: 全部大写：%@", [strUpper uppercaseString]);
-
-    NSString* str9= @"aaaaaa";
-    NSLog(@"--->10: 首字母大写：%@  \n ",[str9 capitalizedString]);
-    
-    
-#pragma mark 11.判断是否包含：前缀、后缀
-#pragma mark
-    NSString *string= @"I love China";
-    BOOL isHasI=    [string hasPrefix:@"I"];
-    BOOL isHasChina=[string hasSuffix:@"China"];
-    NSLog(@"--->11: 是否包含前缀1：%d ",isHasI);
-    NSLog(@"--->11: 是否包含后缀2：%d \n ",isHasChina);
-    
-    NSString *str12= @"1234567890ABCDEFGHIJKLMN!";
-    NSString *subToString = [str12 substringToIndex:6];     //从首位到第六位，共截取前六位
-    
-    NSString *subFromString = [str12 substringFromIndex:6]; //从第六后面，第七位开始截取，一直截取到最后一位
-
-    NSString *rangeString = [str12 substringWithRange:NSMakeRange(6, 3)]; //从第六后面，共截取3位
-    
-    // NSString *str12A= @"This is a string";
-    // NSString *str12B= @"string";
-    // NSRange range123= [str12A rangeOfString:str12B].location;
-    // NSRange range123= [str12A rangeOfString:str12B];
-    // NSLog(@"--->12: range123     ：%@ ",range123);
-    NSLog(@"--->12: subToString  ：%@ ",subToString);
-    NSLog(@"--->12: subFromString：%@ ",subFromString);
-    NSLog(@"--->12: rangeString  ：%@ ",rangeString);
-    
-    
-    // 汉字与UTF8相互转化:
-    NSString* strA = [@"中国万岁" zm_encodingUTF8String];
-    NSLog(@"-----汉字 --> UTF8：strA = %@ ",strA);
-
-    NSString* strB = [strA zm_decodeUTF8String];
-    NSLog(@"-----UTF8 --> 汉字：strB = %@ \n ",strB);    
-    
-    // 中文与ASCII相互转化:
-    NSString* strC = [@"湖南省岳阳市岳阳楼High" zm_encodingASCIIString];
-    NSLog(@"---汉字 --> ASCII：strC = %@ ",strC);
-    
-    NSString* strD = [strC zm_decodeASCIIString];
-    NSLog(@"---ASCII --> 汉字： strD = %@ \n ",strD);
-    
-    // 在已有字符串所指定的位置中 插入字符串
-    NSLog(@"intValue = %d", [@"02" intValue]);
-    NSLog(@"插入后 = %@ ", [@"2017-3" zm_insertStringTo:@"0as" atIndex:5]);
-    NSLog(@"插入后 = %@ ", [@"2" zm_insertStringTo:@"0" atIndex:0]);
-    NSLog(@"插入后 = %@ \n ", [@"aaaa-zz" zm_insertStringTo:@"0022" atIndex:5]);
+//    // 特殊字符 \转义字符
+//    NSLog(@"---> 特殊字符 =  '' @  \" \" Click ");
+//    NSString *string_11 = NSLocalizedString(@"内容", @"解释说明");
+//    NSString *string_22 = NSLocalizedString(@"Loading...", @"HUD loading title");
+//    NSLog(@"---> string_11 = %@",string_11);
+//    NSLog(@"---> string_22 = %@",string_22);
+//
+//    //替换
+//    NSString *str = @"Replacing/";
+//    str = [str stringByReplacingOccurrencesOfString:@"/" withString:@"\\"];
+//    NSLog(@"---> str = %@ \n \n \n",str);
+//    
+//    NSString* aa = @"SDFADF",   *bb = @"s dfa sf_aff_sfag";
+//    NSLog(@"字符串拼接 = %@",[NSString zm_getABwithA:aa and:bb]);
+//    NSLog(@"去掉空格后 = %@",[NSString zm_removeStringEmpty:bb]);
+//    
+//    // 判断一个字符串里是否包含了另一个字符串: myString是否包含strA
+//    NSString* string = @"HomeDirectoryPath holle world girls";
+//    NSString* strA = @"girlds";
+//    NSLog(@" isContainStringA = %d",[NSString zm_stringA:strA isContainStringB:string]);
+//    
+//    NSString* ssssa = @"魏一平";
+//    [NSString zm_isChineseString:ssssa];
+//    NSString* str1 = @"魏 一 平ads2  ,.,[sadf";
+//    
+//    NSLog(@"---> trim = %@",[str1 zm_trim]);
+//    NSLog(@"---> isAllLetter = %d",[@"asdfia  bjJASDFAJN" zm_isAllLetter]);
+//    
+//    NSLog(@"---> isAllNum = %d",[@"112344,3" zm_isAllNum]);
+//    NSLog(@"---> isContainNum = %d",[str1 zm_isContainNum]);
+//    
+//    NSLog(@"---> isContainSpecialString = %d",[str1 zm_isContainSpecialString]);
+//    NSLog(@"---> isIllegalString = %d \n \n ",[str1 zm_isIllegalString]);
+//    
+//}
+//
+////字符串的：截取、分割、替换、拼接、移除、插入
+//-(void)changeSting
+//{
+//    // 如下只是是一个截取办法，不同截取的方法都能达到目的！！！
+//    NSString *str=@"1234567890abcdefgABCDEFG";
+//    
+//#pragma mark 1.截取_后几位 （从指定的字符串开始到尾部）
+//#pragma mark
+//    NSLog(@"--->1: 从指定位置到尾部：%@",[str substringFromIndex:7]);
+//    
+//    
+//#pragma mark 2.截取_前几位 （是开始位置截取到指定位置但是不包含指定位置）
+//#pragma mark
+//    NSLog(@"--->2: 截取前几位：%@",[str substringToIndex:12]);
+//    
+//    
+//#pragma mark 3.截取_指定宽度   按照给定的NSRang字符串截取字符串的：（开始位置，宽度）
+//#pragma mark
+//    NSLog(@"--->3: 从指定位置截取制定的宽度：%@",[str substringWithRange:NSMakeRange(5,8)]);
+//    
+//    
+//#pragma mark 4.分割
+//#pragma mark
+//    NSString *str1=@"11=22=33=44";
+//    NSArray *arry=[str1 componentsSeparatedByString:@"="];
+//    NSLog(@"--->4: 分割_arry：%@",arry);
+//    NSLog(@"--->4: 输出第0个：%@ ",[arry objectAtIndex:0]);
+//    NSLog(@"--->4: 输出第1个：%@ ",[arry objectAtIndex:1]);
+//    NSLog(@"--->4: 输出第2个：%@ ",[arry objectAtIndex:2]);
+//    NSLog(@"--->4: 输出第3个：%@ \n ",[arry objectAtIndex:3]);
+//    //2017-05-18 11:02:06.373 ProjectArchitecture[6253:100399] --->4: 输出第0个：11
+//    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第1个：22
+//    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第2个：33
+//    //2017-05-18 11:02:06.374 ProjectArchitecture[6253:100399] --->4: 输出第3个：44
+//    
+//    
+//#pragma mark 5.拼接
+//#pragma mark
+//    NSString* string1= @"str1 ";
+//    NSString* string2= @"str2";
+//    NSString* String= [string1 stringByAppendingFormat:@"%@",string2];
+//    NSLog(@"--->5: 拼接：%@",String);
+//    
+//    //尾部追加字符串
+//    NSMutableString *str5= [[NSMutableString alloc] initWithString:@"ABCDEFG_"];
+//    [str5 appendString:@"12345"];
+//    NSLog(@"--->5: 追加字符串：%@ \n ",str5);
+//    
+//    
+//#pragma mark 6.替换
+//#pragma mark
+//    NSString *str6 = @"Hello world!";
+//    str6 =[str6 stringByReplacingOccurrencesOfString:@"world" withString:@"India"];
+//    NSLog(@"--->6: 替换：%@ \n ",str6); //复制代码你将会看到输入 Hello India
+//    
+//    
+//#pragma mark 7.移除：以空格替换
+//#pragma mark
+//    NSString* cutString=@"cut_STring";
+//    NSString* cutResult=[cutString stringByReplacingOccurrencesOfString:@"_S" withString:@""];
+//    NSLog(@"--->7: 移除：%@ ",cutResult);
+//    
+//    //去除字符串首尾的空格和换行符
+//    NSString *str7= @"   I love China \n ";
+//    str7= [str7 stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+//    NSLog(@"--->7: 去除字符串首尾的空格和换行符：%@ \n ",str7);
+//    
+//    
+//#pragma mark 8.删除字符串：(开始位置，删除个数)
+//#pragma mark
+//    NSMutableString* str8= [[NSMutableString alloc] initWithString:@"123456789"];
+//    [str8 deleteCharactersInRange:NSMakeRange(2,5)];
+//    NSLog(@"--->8: 删除字符串: %@ \n ",str8);
+//    [str8 deleteCharactersInRange:NSMakeRange(str8.length,1)];
+//    
+//    
+//#pragma mark 9.在已有字符串所指定的位置中 插入字符串
+//#pragma mark
+//    NSString* date=@"20150421";
+//    NSMutableString *timestr = [[NSMutableString alloc] initWithString:date];
+//    [timestr insertString:@"-" atIndex:4];
+//    [timestr insertString:@"-" atIndex:7];
+//    NSLog(@"--->9: 插入：%@ \n ",timestr);
+//    
+//    
+//#pragma mark 10.字符串大小写转换
+//#pragma mark
+//    NSString *strLow = @"This is a lowerCaseString!";
+//    [strLow lowercaseString];
+//    NSLog(@"--->10: 全部小写：%@ ", [strLow lowercaseString]);
+//    
+//    NSString *strUpper= @"This is a upperCaseString!";
+//    [strUpper uppercaseString];
+//    NSLog(@"--->10: 全部大写：%@", [strUpper uppercaseString]);
+//
+//    NSString* str9= @"aaaaaa";
+//    NSLog(@"--->10: 首字母大写：%@  \n ",[str9 capitalizedString]);
+//    
+//    
+//#pragma mark 11.判断是否包含：前缀、后缀
+//#pragma mark
+//    NSString *string= @"I love China";
+//    BOOL isHasI=    [string hasPrefix:@"I"];
+//    BOOL isHasChina=[string hasSuffix:@"China"];
+//    NSLog(@"--->11: 是否包含前缀1：%d ",isHasI);
+//    NSLog(@"--->11: 是否包含后缀2：%d \n ",isHasChina);
+//    
+//    NSString *str12= @"1234567890ABCDEFGHIJKLMN!";
+//    NSString *subToString = [str12 substringToIndex:6];     //从首位到第六位，共截取前六位
+//    
+//    NSString *subFromString = [str12 substringFromIndex:6]; //从第六后面，第七位开始截取，一直截取到最后一位
+//
+//    NSString *rangeString = [str12 substringWithRange:NSMakeRange(6, 3)]; //从第六后面，共截取3位
+//    
+//    // NSString *str12A= @"This is a string";
+//    // NSString *str12B= @"string";
+//    // NSRange range123= [str12A rangeOfString:str12B].location;
+//    // NSRange range123= [str12A rangeOfString:str12B];
+//    // NSLog(@"--->12: range123     ：%@ ",range123);
+//    NSLog(@"--->12: subToString  ：%@ ",subToString);
+//    NSLog(@"--->12: subFromString：%@ ",subFromString);
+//    NSLog(@"--->12: rangeString  ：%@ ",rangeString);
+//    
+//    
+//    // 汉字与UTF8相互转化:
+//    NSString* strA = [@"中国万岁" zm_encodingUTF8String];
+//    NSLog(@"-----汉字 --> UTF8：strA = %@ ",strA);
+//
+//    NSString* strB = [strA zm_decodeUTF8String];
+//    NSLog(@"-----UTF8 --> 汉字：strB = %@ \n ",strB);    
+//    
+//    // 中文与ASCII相互转化:
+//    NSString* strC = [@"湖南省岳阳市岳阳楼High" zm_encodingASCIIString];
+//    NSLog(@"---汉字 --> ASCII：strC = %@ ",strC);
+//    
+//    NSString* strD = [strC zm_decodeASCIIString];
+//    NSLog(@"---ASCII --> 汉字： strD = %@ \n ",strD);
+//    
+//    // 在已有字符串所指定的位置中 插入字符串
+//    NSLog(@"intValue = %d", [@"02" intValue]);
+//    NSLog(@"插入后 = %@ ", [@"2017-3" zm_insertStringTo:@"0as" atIndex:5]);
+//    NSLog(@"插入后 = %@ ", [@"2" zm_insertStringTo:@"0" atIndex:0]);
+//    NSLog(@"插入后 = %@ \n ", [@"aaaa-zz" zm_insertStringTo:@"0022" atIndex:5]);
 }
 
 // 字符串拼接

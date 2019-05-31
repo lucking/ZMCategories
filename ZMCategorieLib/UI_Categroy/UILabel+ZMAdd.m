@@ -8,7 +8,6 @@
 
 #import "UILabel+ZMAdd.h"
 #import "NSString+ZMAdd.h"
-//#import "TestColorHeader.h"
 
 @implementation UILabel (ZMAdd)
 @dynamic textSize;
